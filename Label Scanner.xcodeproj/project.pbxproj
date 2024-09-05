@@ -11,6 +11,8 @@
 		1B6206832C6F501F00141984 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6206822C6F501F00141984 /* ContentView.swift */; };
 		1B6206852C6F502000141984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B6206842C6F502000141984 /* Assets.xcassets */; };
 		1B6206882C6F502000141984 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B6206872C6F502000141984 /* Preview Assets.xcassets */; };
+		1B67D0592C886C97007CF551 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67D0582C886C97007CF551 /* CameraView.swift */; };
+		1B67D05D2C887155007CF551 /* NutriScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67D05C2C887155007CF551 /* NutriScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		1B6206822C6F501F00141984 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B6206842C6F502000141984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B6206872C6F502000141984 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B67D0582C886C97007CF551 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		1B67D05C2C887155007CF551 /* NutriScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriScore.swift; sourceTree = "<group>"; };
+		1BA708792C89FE500001EC60 /* Label-Scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Label-Scanner-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		1B62067F2C6F501F00141984 /* Label Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				1BA708792C89FE500001EC60 /* Label-Scanner-Info.plist */,
 				1B6206802C6F501F00141984 /* Label_ScannerApp.swift */,
+				1B67D0582C886C97007CF551 /* CameraView.swift */,
 				1B6206822C6F501F00141984 /* ContentView.swift */,
+				1B67D05C2C887155007CF551 /* NutriScore.swift */,
 				1B6206842C6F502000141984 /* Assets.xcassets */,
 				1B6206862C6F502000141984 /* Preview Content */,
 			);
@@ -137,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B67D0592C886C97007CF551 /* CameraView.swift in Sources */,
+				1B67D05D2C887155007CF551 /* NutriScore.swift in Sources */,
 				1B6206832C6F501F00141984 /* ContentView.swift in Sources */,
 				1B6206812C6F501F00141984 /* Label_ScannerApp.swift in Sources */,
 			);
@@ -274,6 +284,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Label Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Label-Scanner-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +313,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Label Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Label-Scanner-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

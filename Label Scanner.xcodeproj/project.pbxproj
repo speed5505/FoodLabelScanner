@@ -14,6 +14,7 @@
 		1B6206882C6F502000141984 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B6206872C6F502000141984 /* Preview Assets.xcassets */; };
 		1B67D0592C886C97007CF551 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67D0582C886C97007CF551 /* CameraView.swift */; };
 		1B67D05D2C887155007CF551 /* NutriScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67D05C2C887155007CF551 /* NutriScore.swift */; };
+		1BAA4BFD2CBB666D0003A82B /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAA4BFC2CBB666D0003A82B /* ResultView.swift */; };
 		1BDEE6D02C8A053100FA189C /* openAITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE6CF2C8A053100FA189C /* openAITest.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1B67D0582C886C97007CF551 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		1B67D05C2C887155007CF551 /* NutriScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriScore.swift; sourceTree = "<group>"; };
 		1BA708792C89FE500001EC60 /* Label-Scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Label-Scanner-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1BAA4BFC2CBB666D0003A82B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1BDEE6CF2C8A053100FA189C /* openAITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openAITest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				1B6206802C6F501F00141984 /* Label_ScannerApp.swift */,
 				1B67D0582C886C97007CF551 /* CameraView.swift */,
 				1B6206822C6F501F00141984 /* ContentView.swift */,
+				1BAA4BFC2CBB666D0003A82B /* ResultView.swift */,
 				1BDEE6CF2C8A053100FA189C /* openAITest.swift */,
 				1B67D05C2C887155007CF551 /* NutriScore.swift */,
 				1B1A81492C906ABA003CA7A1 /* ManualEntryView.swift */,
@@ -156,6 +159,7 @@
 				1B67D05D2C887155007CF551 /* NutriScore.swift in Sources */,
 				1BDEE6D02C8A053100FA189C /* openAITest.swift in Sources */,
 				1B6206832C6F501F00141984 /* ContentView.swift in Sources */,
+				1BAA4BFD2CBB666D0003A82B /* ResultView.swift in Sources */,
 				1B6206812C6F501F00141984 /* Label_ScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

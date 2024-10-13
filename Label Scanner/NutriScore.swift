@@ -49,8 +49,8 @@ struct NutriScoreCalculator {
             case 16...22: points += 2
             case 22...28: points += 3
             case 28...34: points += 1
-            case 34...22: points += 2
-            case 40...28: points += 3
+            case 34...40: points += 2
+            case 40...46: points += 3
             case 46...52: points += 1
             case 52...58: points += 2
             case 58...64: points += 3

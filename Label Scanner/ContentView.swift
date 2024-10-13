@@ -11,49 +11,39 @@ struct ContentView: View {
     @State private var valueArr = [Double]()
     @State private var nutriScore: Int = 0
     @State private var grade: String = ""
+    @State private var isTitleScaled = false 
+    @State private var total: Int = 0
     
-    // TODO: Store api key safely in .env file or equivalent
     let apiKey = ProcessInfo.processInfo.environment["API_KEY"]!
 
     // TODO: Testing UI - to be updated
     var body: some View {
         ZStack {
-            //Image("backgroundImage").resizable().scaledToFill().ignoresSafeArea()
+            
             NavigationStack {
                 ZStack {
                     Image("backgroundImage").resizable().scaledToFill().ignoresSafeArea()
                     VStack {
-                        if let image = capturedImage {
-                            Image(uiImage: image)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 300)
-                        } else {
-                            Image(systemName: "camera")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .foregroundStyle(.tint)
-                        }
-
-                        if !recognizedText.isEmpty {
-                            Text(recognizedText)
-                                .padding()
-                        }
+//                        Image("hackathon_image-removebg-preview").resizable()
                         
-                        if !openAIResponse.isEmpty {
-                            Text("OpenAI Response:")
-                            Text(openAIResponse)
-                                .padding()
-                        }
+                        Text("Nutri-Lens").font(.custom("AvenirNext-Bold", size: 40))
+                            .shadow(color: .gray, radius: 5, x: 0, y: 2)
+                            .padding(.top, 30)
+                        Spacer()
+                        
+                        
 
                         Button("Enter Manually") {
                             isShowingManualEntry = true
                         }
+                        .frame(minWidth: 200)
                         .padding()
-                        .background(Color.green)
-                        .foregroundColor(.white)
+                        .background(Color(red: 0.6, green: 0.8, blue: 1.0))
+                        .foregroundColor(.black)
                         .cornerRadius(10)
-
+                        .font(.custom("Avenir Next", size: 18))
+                        .padding(.bottom, 1)
+                                        
                         
                         // TODO: Integrate openAI calls with this button
                         Button("Open Camera") {
@@ -66,6 +56,12 @@ struct ContentView: View {
                                 print(recognizedText)
                             }
                         }
+                        .frame(minWidth: 200)
+                        .padding()
+                        .background(Color.white)
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                        .font(.custom("Avenir Next", size: 18))
 
                         
                         
@@ -77,14 +73,20 @@ struct ContentView: View {
                                 print(openAIResponse)
                             }
                         }
+                        .frame(minWidth: 200)
                         .padding()
+                        .background(Color(red: 0.6, green: 0.8, blue: 1.0))
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                        .font(.custom("Avenir Next", size: 18))
+                        .padding(.bottom, 1)
                     }
                     .padding()
                     .navigationDestination(isPresented: $isShowingManualEntry) {
                         ManualEntryView()
                     }
                     .navigationDestination(isPresented: $isComplete) {
-                        ResultView(scoreArr: valueArr, score: nutriScore, grade: grade)
+                        ResultView(scoreArr: valueArr, score: nutriScore, grade: grade, total: total)
                     }
                 }
                 
@@ -157,7 +159,7 @@ struct ContentView: View {
             
             // Prompt to be fine tuned
             "messages": [
-                ["role": "system", "content": "Please extract the following nutritional values from the provided text (only numerical value), listing each value (only numerical) on a new line (not a numbered list): serving size, calories, total fat (g), saturated fat (g), sodium (mg), total sugars (g), dietary fiber (g), and protein (g). If a value is absent, assume it is 0"],
+                ["role": "system", "content": "Please extract the following nutritional values from the provided text (only numerical value), listing each value (only numerical) on a new line (not a numbered list): serving size, calories, total fat (g), saturated fat (g), sodium (g), total sugars (g), dietary fiber (g), and protein (g). If a value is absent, assume it is 0"],
                 ["role": "user", "content": text]
             ],
             "max_tokens": 200
@@ -285,6 +287,8 @@ struct ContentView: View {
             default:
                 grade = "E" 
             }
+        
+        total = Int(valueArr[1]+valueArr[2]+valueArr[3]+valueArr[4]+valueArr[5]+valueArr[6]+valueArr[7])
 
         print(nutriScore)
         print(grade)

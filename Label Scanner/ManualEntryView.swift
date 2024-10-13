@@ -20,45 +20,47 @@ struct ManualEntryView: View {
     @State private var nutriScore: Int? = nil
 
     var body: some View {
-        VStack {
-            Form {
-                Section(header: Text("Enter Nutritional Info")) {
-                    TextField("Serving Size (g)", text: $servingSize)
-                        .keyboardType(.decimalPad)
-                    TextField("Calories (kcal)", text: $calories)
-                        .keyboardType(.decimalPad)
-                    TextField("Total Fat (g)", text: $totalFat)
-                        .keyboardType(.decimalPad)
-                    TextField("Saturated Fat (g)", text: $saturatedFat)
-                        .keyboardType(.decimalPad)
-                    TextField("Sodium (mg)", text: $sodium)
-                        .keyboardType(.decimalPad)
-                    TextField("Total Sugars (g)", text: $totalSugars)
-                        .keyboardType(.decimalPad)
-                    TextField("Fiber (g)", text: $fiber)
-                        .keyboardType(.decimalPad)
-                    TextField("Protein (g)", text: $protein)
-                        .keyboardType(.decimalPad)
+        ZStack {
+            VStack {
+                Form {
+                    Section(header: Text("Enter Nutritional Info")) {
+                        TextField("Serving Size (g)", text: $servingSize)
+                            .keyboardType(.decimalPad)
+                        TextField("Calories (kcal)", text: $calories)
+                            .keyboardType(.decimalPad)
+                        TextField("Total Fat (g)", text: $totalFat)
+                            .keyboardType(.decimalPad)
+                        TextField("Saturated Fat (g)", text: $saturatedFat)
+                            .keyboardType(.decimalPad)
+                        TextField("Sodium (mg)", text: $sodium)
+                            .keyboardType(.decimalPad)
+                        TextField("Total Sugars (g)", text: $totalSugars)
+                            .keyboardType(.decimalPad)
+                        TextField("Fiber (g)", text: $fiber)
+                            .keyboardType(.decimalPad)
+                        TextField("Protein (g)", text: $protein)
+                            .keyboardType(.decimalPad)
+                    }
+                }
+                
+                Button(action: calculateNutriScore) {
+                    Text("Calculate Nutri-Score")
+                        .bold()
+                        .frame(minWidth: 100, minHeight: 40)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                if let score = nutriScore {
+                    Text("Nutri-Score: \(score)")
+                        .font(.title)
+                        .padding()
                 }
             }
-            
-            Button(action: calculateNutriScore) {
-                Text("Calculate Nutri-Score")
-                    .bold()
-                    .frame(minWidth: 100, minHeight: 40)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-            }
-            .padding()
-            
-            if let score = nutriScore {
-                Text("Nutri-Score: \(score)")
-                    .font(.title)
-                    .padding()
-            }
+            .navigationTitle("Manual Entry")
         }
-        .navigationTitle("Manual Entry")
     }
     
     func calculateNutriScore() {

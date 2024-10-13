@@ -30,6 +30,7 @@
 		1BA708792C89FE500001EC60 /* Label-Scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Label-Scanner-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1BAA4BFC2CBB666D0003A82B /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		1BDEE6CF2C8A053100FA189C /* openAITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openAITest.swift; sourceTree = "<group>"; };
+		1BFFF6C52CBB9D7800CE4D25 /* Label Scanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Label Scanner.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		1B62067F2C6F501F00141984 /* Label Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				1BFFF6C52CBB9D7800CE4D25 /* Label Scanner.entitlements */,
 				1BA708792C89FE500001EC60 /* Label-Scanner-Info.plist */,
 				1B6206802C6F501F00141984 /* Label_ScannerApp.swift */,
 				1B67D0582C886C97007CF551 /* CameraView.swift */,
@@ -291,9 +293,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Label Scanner/Label Scanner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Label Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = QV34C3H576;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Label-Scanner-Info.plist";
@@ -307,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kabir.Label-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Kabir.Label-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,9 +324,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Label Scanner/Label Scanner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Label Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = QV34C3H576;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Label-Scanner-Info.plist";
@@ -336,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kabir.Label-Scanner";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Kabir.Label-Scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

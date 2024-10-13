@@ -72,7 +72,7 @@ struct NutriScoreCalculator {
             default: break
         }
         
-        switch nutrition.sodium*100/nutrition.servingSize {
+        switch nutrition.sodium*10000/nutrition.servingSize {
             case 90...180: points += 1
             case 180...270: points += 2
             case 270...360: points += 3
